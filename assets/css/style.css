@@ -105,3 +105,9 @@ body {
   /* Add styles to highlight the lane */
   background-color: peachpuff;
 }
+
+.footer{
+  bottom: 0;
+  padding: 5rem;
+  text-align: center;
+}

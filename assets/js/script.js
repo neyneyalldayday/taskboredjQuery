@@ -78,6 +78,7 @@ function renderTaskList() {
     }   
    });   
     
+
 }
 
 // Todo: create a function to handle adding a new task
@@ -158,15 +159,13 @@ $(document).ready(function () {
     
     renderTaskList()
 
-    $('.delete-task').on('click', handleDeleteTask);
+    $(document).on('click', '.delete-task', handleDeleteTask);
 
     $('.task-card').draggable({
         revert: 'invalid',
         containment: 'document',      
-     
+        
     });
-
-
     
     // Droppable configuration
     $('.lane').droppable({
