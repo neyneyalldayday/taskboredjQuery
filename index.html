@@ -37,24 +37,24 @@
             <form class="task-form">
               <!-- Form fields go here -->
               <div class="inputs">
-                <div>
+                <div class="in-steeze">
                     <label for="task-input">task</label>
-                    <input  id="task-input"/>      
+                    <input  id="task-input" class="input-style"/>      
                 </div>
-                <div>
+                <div class="in-steeze">
                     <label for="task-date">due date</label>
-                    <input type="date" id="task-date"/>  
+                    <input type="date" id="task-date" class="input-style"/>  
                 </div>      
-            </div>
-            <div class="description-section">
+            </div >
+            <div class="description-section in-steeze">
                 <label>task description</label>
-                <textarea id="description"></textarea>
+                <textarea id="description" class="input-style"></textarea>
             </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="add-task">Add Task</button>
+            <button type="button" class="task-btn" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="task-btn" id="add-task">Add Task</button>
           </div>
         </div>
       </div>
