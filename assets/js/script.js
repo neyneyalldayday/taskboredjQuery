@@ -110,7 +110,17 @@ function handleAddTask(event){
 function handleDeleteTask(event){
     event.preventDefault();
     const taskId = $(this).closest('.task-card').attr('id')
-    $(`#${taskId}`).remove();
+
+    const taskIndex = taskList.findIndex(task => task.id === taskId);
+
+    if (taskIndex !== -1) {
+        taskList.splice(taskIndex, 1);
+
+        localStorage.setItem('tasks', JSON.stringify(taskList))
+        
+        $(`#${taskId}`).remove();
+    }
+    
 }
 
 // Todo: create a function to handle dropping a task into a new status lane
