@@ -128,7 +128,7 @@ function handleDeleteTask(event){
 
 // Todo: create a function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {
-    console.log('yo')
+   
     // event.preventDefault();
 
     const taskId = ui.draggable.attr('id');
@@ -154,8 +154,6 @@ function handleDrop(event, ui) {
 // Todo: when the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
 $(document).ready(function () {
 
-  
-
     $('#add-task').on('click',  handleAddTask);
     
     renderTaskList()
@@ -164,31 +162,11 @@ $(document).ready(function () {
 
     $('.task-card').draggable({
         revert: 'invalid',
-        containment: 'document',
-      // Clone the element being dragged
+        containment: 'document',      
      
     });
 
-    $('.task-card').on('touchstart', function(event){
-        event.preventDefault()
-        console.log('touch event', event.target); // Changed to event.target
-        if ($(event.target).hasClass('ui-draggable')){ // Use jQuery's hasClass for clarity
-            const thisShit = $(event.target); // Changed to event.target
-            console.log(thisShit);
-            const laneId = thisShit.attr('id'); // Assuming you meant to get the ID of the target
-            console.log(laneId);
-        }
-    });
-    
-    $('.lane').on('touchmove', function(event){
-        event.preventDefault()
-        console.log('move event');
-    });
-    
-    $('.lane').on('touchend', function(event){
-        event.preventDefault()
-        console.log("daddy");
-    });
+
     
     // Droppable configuration
     $('.lane').droppable({
